@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=CoinSpawner
+comment0.text=\r\n\ actor\ that\ controls\ the\ coin\ spawn\ points\r\n
+comment1.params=points
+comment1.target=CoinSpawner(java.util.ArrayList)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ \ \ \ \ spawn\ a\ coin\ if\ one\ doesn't\ exist\ on\ the\ map\r\n
+comment3.params=
+comment3.target=Point\ randomPoint()
+numComments=4
