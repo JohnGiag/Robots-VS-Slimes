@@ -28,7 +28,7 @@ public class Help extends World
     
     
     public void act(){
-        if(Greenfoot.isKeyDown("escape")){
+        if(Greenfoot.isKeyDown("enter")){
            if(level.equals("menu"))
             Greenfoot.setWorld(parent);
            else if(level.equals("1"))
