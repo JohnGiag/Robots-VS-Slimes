@@ -16,8 +16,8 @@ public class Lvl2Txt extends TextButton
     {
         // Add your action code here.
          if(Greenfoot.mouseClicked(this)){
-            MainMenu.stopMusic();
-            Greenfoot.setWorld(new Level2());
+           // MainMenu.stopMusic();
+            Greenfoot.setWorld(new Help("2"));
             
         }
     }    

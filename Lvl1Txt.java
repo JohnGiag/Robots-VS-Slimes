@@ -18,8 +18,8 @@ public class Lvl1Txt extends TextButton
          if(Greenfoot.mouseClicked(this)){
             
              
-            MainMenu.stopMusic();
-            Greenfoot.setWorld(new Level1());
+           // MainMenu.stopMusic();
+            Greenfoot.setWorld(new Help("1"));
         }
     }    
 }

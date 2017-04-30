@@ -15,7 +15,7 @@ public class Enemy extends Character
     protected GreenfootImage img2l=new GreenfootImage("enemyAnim/2.png");
     protected GreenfootImage img1r=new GreenfootImage("enemyAnim/1right.png");
     protected GreenfootImage img2r=new GreenfootImage("enemyAnim/2right.png");
-    
+    protected boolean wasInAir=true;
     
     
     private int fc=1;
@@ -54,6 +54,10 @@ public class Enemy extends Character
     //method to control enemy actor movement
     public void enemyMovement(){
         if(!jumping){
+            if(wasInAir){
+                randomDirection();
+                wasInAir=false;
+            }
             if(direction==1){
               
                animateRight();
@@ -65,6 +69,7 @@ public class Enemy extends Character
             }
        }
        else{//move slower when falling
+           wasInAir=true;
             if(direction==1){
               
                animateRight();
@@ -145,7 +150,7 @@ public class Enemy extends Character
             Greenfoot.playSound("sounds/hitFire.wav");
             World world=getWorld();
             world.getObjects(EnemySpawnPoint.class).get(0).spawnEnragedEnemy();
-           
+            active=false;
             world.removeObject(this);
             
            
